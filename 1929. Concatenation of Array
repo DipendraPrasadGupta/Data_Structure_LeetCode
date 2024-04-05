@@ -14,3 +14,19 @@ public:
         return ans;
     }
 };
+
+
+// Java solution 
+
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+        int a = nums.length;
+        int ans[] = new int [a*2];
+        for(int i=a; i<ans.length; i++)
+        {
+            ans[i-a] = nums[i-a];
+            ans[i]=nums[i-a];
+        }
+        return ans;
+    }
+}
